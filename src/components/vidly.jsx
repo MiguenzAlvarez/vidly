@@ -14,6 +14,7 @@ class Movies extends Component {
     currentPage: 1,
     pageSize: 4,
     sortColumn: { path: "title", order: "asc" },
+    selectedGenre: "",
   };
 
   componentDidMount() {
@@ -84,6 +85,7 @@ class Movies extends Component {
             items={this.state.genres}
             selectedGenre={this.state.selectedGenre}
             onItemSelect={this.handleGenreSelect}
+            selectedItem={this.state.selectedGenre}
           />
         </div>
         <div className="col">
